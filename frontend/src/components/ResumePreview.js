@@ -22,8 +22,8 @@ const ResumePreview = () => {
       <div className="resume-header">
         {about.picture && <img src={about.picture} alt="avatar" />}
         <div className="info">
-          <h4>{about.name || "Nikhil Verma"}</h4>
-          <p>{about.role || "Software Engineering Intern"}</p>
+          <h4>{about.name || "Enter Your Name"}</h4>
+          <p>{about.role || "Enter Your Role"}</p>
         </div>
       </div>
 
@@ -38,7 +38,7 @@ const ResumePreview = () => {
         </div>
         <div>
           <MdLocationPin />
-          <span>{about.address || "Bengaluru, IN"}</span>
+          <span>{about.address || "Your Location?, IN"}</span>
         </div>
         <div>
           <RiLinkedinBoxFill />
