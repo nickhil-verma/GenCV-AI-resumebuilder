@@ -1,0 +1,89 @@
+.about-container {
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .about-button {
+    padding: 0.5rem 1rem;
+    
+     
+      
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    background-color: #ffc727;
+    color: white;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius:5px ;
+    box-shadow: 5px 5px #8888885a;
+    border: solid black 1px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .about-button:hover {
+    background-color: #ddae2e;
+  }
+  
+  .about-button-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .about-form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  
+  .about-form-control {
+    flex: 1;
+    margin-right: 1rem;
+  }
+  
+  .about-form-control label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-form-control input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .about-form {
+    background-color: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .about-title {
+    font-size: 1.5rem;
+    color: #b28c25;
+    margin-bottom: 1rem;
+  }
+  
+  .about-textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    min-height: 150px;
+  }
+  
+  .about-answer {
+    margin-top: 1rem;
+    white-space: pre-wrap;
+  }
+  

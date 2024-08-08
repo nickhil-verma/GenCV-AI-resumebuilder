@@ -1,0 +1,59 @@
+/* General styles for the navbar */
+.navbar-container {
+    padding: 20px;
+    background-color: #f7fafc;
+    width: 100%;
+}
+
+.navbar-flex {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content:space-between ;
+    align-items: center;
+    
+}
+
+.logo{
+    height: 40px;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 40px;
+    margin-right: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-link {
+    font-size: 1.125rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-button {
+    background-color: #ffc727;
+    color: white;
+    padding: 8px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius:5px ;
+    box-shadow: 5px 5px #8888885a;
+    border: solid black 1px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.navbar-button:hover {
+    background-color: #d4a524;
+}
+
+@media (min-width: 576px) {
+    .navbar-heading {
+        margin-left: 32px;
+    }
+
+    .navbar-nav {
+        margin-right: 32px;
+    }
+}

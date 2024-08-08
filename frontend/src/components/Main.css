@@ -1,0 +1,75 @@
+/* Main.css */
+.main-container {
+    background-color: #f7fafc;
+    width: 100%;
+    padding: 40px 0;
+  }
+  
+  .main-heading {
+    text-align: center;
+    color: #4a5568;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+  }
+  
+  .main-inner-container {
+    max-width: 1280px;
+    padding: 0 32px;
+    margin: 12px auto;
+  }
+  
+  .main-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .main-stack.row {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .theme-select {
+    display: flex;
+  }
+  
+  .download-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+   
+    background-color: #ffc727;
+    color: white;
+   
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius:5px ;
+    box-shadow: 5px 5px #8888885a;
+    border: solid black 1px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .download-button:hover {
+    background-color: #ddae2e;
+  }
+  
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .main-content.row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  @media (min-width: 768px) {
+    .main-content.row {
+      gap: 16px;
+    }
+  }
+  

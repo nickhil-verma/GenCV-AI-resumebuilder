@@ -1,0 +1,24 @@
+/* ThemeOption.css */
+.theme-option-label {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .theme-option-input {
+    display: none;
+  }
+  
+  .theme-option-checkbox {
+    display: inline-block;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: border-color 0.2s;
+  }
+  
+  .theme-option-checkbox.checked {
+    border-color: #319795; /* teal.600 */
+  }
+  

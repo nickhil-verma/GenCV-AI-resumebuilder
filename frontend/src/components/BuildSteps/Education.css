@@ -1,0 +1,63 @@
+/* Education.css */
+.education-accordion {
+    width: 100%;
+  }
+  
+  .education-accordion-item {
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+  
+  .education-accordion-button {
+    width: 100%;
+    background-color: #f7fafc;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: medium;
+  }
+  
+  .education-accordion-panel {
+    padding: 16px;
+    background-color: white;
+  }
+  
+  .education-form-control {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .education-form-control label {
+    margin-bottom: 4px;
+  }
+  
+  .education-form-control input {
+    padding: 8px;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    background-color: #f7fafc;
+  }
+  
+  .education-form-control input:focus {
+    outline: 2px solid #3182ce;
+  }
+  
+  .education-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #805ad5;
+    color: white;
+    cursor: pointer;
+    margin-top: 16px;
+  }
+  
+  .education-button:hover {
+    background-color: #6b46c1;
+  }
+  

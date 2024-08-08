@@ -1,0 +1,40 @@
+/* Builder.css */
+.builder-container {
+    background-color: white;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .tabs {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .tab-list {
+    display: flex;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .tab {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .tab:hover {
+    background-color: #f7fafc;
+  }
+  
+  .tab.active {
+    border-bottom: 2px solid #3182ce;
+  }
+  
+  .tab-content {
+    padding: 16px;
+  }
+  

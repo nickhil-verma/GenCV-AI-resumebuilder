@@ -1,0 +1,102 @@
+/* ResumePreview.css */
+.resume-container {
+    background-color: white;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    min-height: 100vh;
+  }
+  
+  .resume-header {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+  }
+  
+  .resume-header img {
+    width: 115px;
+    height: 115px;
+    margin: 15px;
+    border-radius: 50%;
+  }
+  
+  .resume-header .info {
+    margin-left: 16px;
+  }
+  
+  .resume-header .info h4 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .resume-header .info p {
+    margin: 0;
+    color: #718096;
+  }
+  
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--theme-color, #3182ce);
+    color: white;
+    padding: 16px;
+  }
+  
+  .contact-info div {
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-info div svg {
+    margin-right: 8px;
+  }
+  
+  .section {
+    margin: 16px 32px;
+  }
+  
+  .section h4 {
+    margin-bottom: 8px;
+    font-size: 20px;
+    color: #2d3748;
+  }
+  
+  .section .item {
+    margin-bottom: 16px;
+  }
+  
+  .section .item p {
+    margin: 4px 0;
+  }
+  
+  .section .item .date-grade {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-style: italic;
+  }
+  
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .skills .tag {
+    padding: 4px 8px;
+    border-radius: 8px;
+    background-color: var(--theme-color-dark, #2b6cb0);
+    color: white;
+  }
+  
+  .project-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .project-link svg {
+    color: inherit;
+  }
+  
