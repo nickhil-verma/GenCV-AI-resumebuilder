@@ -58,7 +58,7 @@ function Signup() {
     return (
         <div className='Wrapper'>
             <div className='rightContainer'>
-            <img src={SignupHero}></img></div>
+            <img src={SignupHero} alt='hero-banner image'></img></div>
             <form className='signup' onSubmit={handleSignup}>
                 <div>
                 <h1>Signup</h1>

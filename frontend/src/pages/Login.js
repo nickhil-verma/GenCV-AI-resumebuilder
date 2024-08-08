@@ -60,7 +60,7 @@ function Login() {
     return (
         <div className='container'>
             <div className='rightContainer'>
-            <img src={LOGOHERO}></img></div>
+            <img src={LOGOHERO} alt='hero-banner img'></img></div>
             <form onSubmit={handleLogin}>
                 <div>
                 <h1>Login</h1>

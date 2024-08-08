@@ -29,7 +29,7 @@
   
   .text {
     color: gray;
-    line-height: 1.7;
+    line-height: 2;
     font-family: 'Poppins', sans-serif;
   }
   
@@ -64,4 +64,54 @@
     width: 100%;
     height: 100%;
   }
+  .geminiLogo{
+    width: 55px;
+    margin: 0rem;
+    border: solid gray 1.5px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    padding-bottom: 0.4rem ;
+    padding-left: 0.6rem;
+    padding-Right: 0.6rem;
+    margin-bottom: -0.5rem;
+  }
+  @media only screen and (max-width: 799px) {
+    .stack {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .hero-image {
+      order: -1; /* Move the image above the text */
+    }
+  
+    .heading {
+      font-size: 1.5rem;
+    }
+  
+    .text {
+      font-size: 0.9rem;
+      padding: 0 15px;
+    }
+  
+    .buttons {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .button {
+      width: 80%;
+      padding: 10px;
+    }
+  
+    .hero-image img {
+      max-width: 80%;
+      height: auto;
+    }
+  }
+  
+  /* Styles for larger screens (800px and up) */
+   
   
