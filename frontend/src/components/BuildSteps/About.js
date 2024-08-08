@@ -131,8 +131,9 @@ const About = () => {
           onChange={(e) => setQuestion(e.target.value)}
           placeholder={`Add a role you are applying for:
 
-            - e.g.: LLM engineer using Python
-            - Web developer using MERN stack`}
+            e.g.: 
+              -LLM engineer using Python
+              - Web developer using MERN stack`}
         ></textarea>
         <button
           type="submit"
