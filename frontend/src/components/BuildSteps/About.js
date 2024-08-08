@@ -129,7 +129,7 @@ const About = () => {
           className="about-textarea"
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
-          placeholder={`Add role for your applying:
+          placeholder={`Add a role you are applying for:
 
             - e.g.: LLM engineer using Python
             - Web developer using MERN stack`}
