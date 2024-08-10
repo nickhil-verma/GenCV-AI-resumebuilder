@@ -88,3 +88,10 @@ button {
   .rightContainer{
     width: 50%;
   }
+
+  .logoutbtn{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+  }

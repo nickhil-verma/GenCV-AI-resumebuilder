@@ -20,6 +20,8 @@
 
 .navbar-nav {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 40px;
     margin-right: 0;
     font-family: 'Poppins', sans-serif;
@@ -29,6 +31,8 @@
     font-size: 1.125rem;
     text-decoration: none;
     color: inherit;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-button {

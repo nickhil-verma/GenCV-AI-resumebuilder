@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { handleError, handleSuccess } from '../utils';
 import { ToastContainer } from 'react-toastify';
-
-function Home() {
+import { IoIosLogOut } from "react-icons/io";
+function Logout() {
     const [loggedInUser, setLoggedInUser] = useState('');
     const [products, setProducts] = useState('');
     const navigate = useNavigate();
@@ -43,12 +43,12 @@ function Home() {
 
     return (
         <div>
-            <h1>Welcome {loggedInUser}</h1>
-            <button onClick={handleLogout}>Logout</button>
+             
+            <button className='logoutbtn' onClick={handleLogout}>Logout &nbsp; <IoIosLogOut /></button>
             
             <ToastContainer />
         </div>
     )
 }
 
-export default Home
+export default Logout

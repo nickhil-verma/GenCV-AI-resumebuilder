@@ -6,6 +6,7 @@ import axios from "axios";
 import { BsStars } from "react-icons/bs";
 
 const About = () => {
+  
   const { about, setAbout } = useResume();
   const [question, setQuestion] = useState("");
   const [generatingAnswer, setGeneratingAnswer] = useState(false);

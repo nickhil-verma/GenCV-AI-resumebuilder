@@ -1,4 +1,6 @@
 import React from "react";
+import { useNavigate } from 'react-router-dom';
+import   { useEffect, useState } from 'react'
 import { useResume } from "../Context";
 import { MdMail, MdLocalPhone, MdLocationPin } from "react-icons/md";
 import { RiLinkedinBoxFill } from "react-icons/ri";
@@ -7,6 +9,8 @@ import "./ResumePreview.css";
 
 // Utility function to replace **bold** with <b>bold</b>
 const boldenText = (text) => {
+
+  
   if (!text) return text;
 
   const regex = /\*\*(.*?)\*\*/g;
@@ -14,6 +18,12 @@ const boldenText = (text) => {
 };
 
 const ResumePreview = () => {
+  const [loggedInUser, setLoggedInUser] = useState('');
+  const [products, setProducts] = useState('');
+  const navigate = useNavigate();
+  useEffect(() => {
+      setLoggedInUser(localStorage.getItem('loggedInUser'))
+  }, [])
   const { theme, about, educationList, skills, workList, projects, printElem } =
     useResume();
 
@@ -22,7 +32,7 @@ const ResumePreview = () => {
       <div className="resume-header">
         {about.picture && <img src={about.picture} alt="avatar" />}
         <div className="info">
-          <h4>{about.name || "Enter Your Name"}</h4>
+          <h4>{about.name || `${loggedInUser}`}</h4>
           <p>{about.role || "Enter Your Role"}</p>
         </div>
       </div>
