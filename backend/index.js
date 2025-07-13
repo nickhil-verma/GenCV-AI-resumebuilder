@@ -7,8 +7,9 @@ const ProductRouter = require('./Routes/ProductRouter');
 
 require('dotenv').config();
 require('./Models/db');
+const PORT = process.env.PORT || 8080;
 
-// ✅ Allow all origins
+// ✅ Allow CORS from all origins
 app.use(cors());
 
 app.use(bodyParser.json());
@@ -20,5 +21,8 @@ app.get('/hello', (req, res) => {
 app.use('/auth', AuthRouter);
 app.use('/products', ProductRouter);
 
-module.exports = app;
-module.exports.handler = serverless(app);
+app.listen(PORT, () => {
+    console.log(`Server is running on ${PORT}`);
+});
+
+ 
