@@ -9,15 +9,9 @@ require('dotenv').config();
 require('./Models/db');
 const PORT = process.env.PORT || 8080;
 
-// ✅ Allow CORS from all origins
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://gen-cv-ai-resumebuilder-frontend.vercel.app");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-  res.header("Access-Control-Allow-Credentials", "true");
-  next();
-});
-
+// ✅ Allow all origins
+app.use(cors());
+app.options('*', cors());
 
 app.use(bodyParser.json());
 
@@ -31,5 +25,3 @@ app.use('/products', ProductRouter);
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`);
 });
-
- 
