@@ -9,11 +9,8 @@ require('dotenv').config();
 require('./Models/db');
 const PORT = process.env.PORT || 8080;
 
-// Allow CORS from specific origin
-app.use(cors({
-    origin: 'https://gen-cv-ai-resumebuilder-frontend.vercel.app',
-    credentials: true // if you're using cookies, sessions, or auth headers
-}));
+// ✅ Allow CORS from all origins
+app.use(cors());
 
 app.use(bodyParser.json());
 
