@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { ToastContainer } from 'react-toastify';
-import { handleError, handleSuccess } from '../utils';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./Login.css";
 import LOGOHERO from '../images/loginhero.gif';
 
 function Login() {
   const [loginInfo, setLoginInfo] = useState({
-    email: '',
+    identifier: '',
     password: ''
   });
 
@@ -15,44 +15,46 @@ function Login() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    const copyLoginInfo = { ...loginInfo };
-    copyLoginInfo[name] = value;
-    setLoginInfo(copyLoginInfo);
+    setLoginInfo((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const { email, password } = loginInfo;
-    if (!email || !password) {
-      return handleError('email and password are required');
+    const { identifier, password } = loginInfo;
+
+    if (!identifier || !password) {
+      toast.error('Email/Username and password are required');
+      return;
     }
+
     try {
-      const url = `https://auth-universal-repo.vercel.app/api/auth/login`; // ✅ Updated API URL
+      const url = `https://auth-universal-repo.vercel.app/api/auth/login`;
       const response = await fetch(url, {
-        method: "POST", // ✅ Confirmed POST
+        method: "POST",
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(loginInfo)
+        body: JSON.stringify({ identifier, password })
       });
+
       const result = await response.json();
-      const { success, message, jwtToken, name, error } = result;
-      if (success) {
-        handleSuccess(message);
-        localStorage.setItem('token', jwtToken);
-        localStorage.setItem('loggedInUser', name);
-        setTimeout(() => {
-          navigate('/home');
-        }, 1000);
-      } else if (error) {
-        const details = error?.details[0].message;
-        handleError(details);
-      } else if (!success) {
-        handleError(message);
+
+      if (!response.ok) {
+        toast.error(result.message || "Login failed");
+        return;
       }
-      console.log(result);
+
+      // ✅ Universal Auth returns: token, username, email
+      localStorage.setItem('token', result.token);
+      localStorage.setItem('loggedInUser', result.username || 'User');
+      localStorage.setItem('email', result.email);
+      toast.success("Login successful!");
+
+      setTimeout(() => {
+        navigate('/home');
+      }, 1000);
     } catch (err) {
-      handleError(err.message || "Something went wrong");
+      toast.error("Server error. Please try again.");
     }
   };
 
@@ -64,13 +66,13 @@ function Login() {
       <form onSubmit={handleLogin}>
         <div>
           <h1>Login</h1>
-          <label htmlFor='email'>Email</label>
+          <label htmlFor='identifier'>Email or Username</label>
           <input
             onChange={handleChange}
-            type='email'
-            name='email'
-            placeholder='Enter your email...'
-            value={loginInfo.email}
+            type='text'
+            name='identifier'
+            placeholder='Enter your email or username...'
+            value={loginInfo.identifier}
           />
         </div>
         <div>
@@ -85,7 +87,7 @@ function Login() {
         </div>
         <button type='submit'>Login</button>
         <span>
-          Doesn't have an account? <Link to="/signup">Signup</Link>
+          Don't have an account? <Link to="/signup">Signup</Link>
         </span>
       </form>
       <ToastContainer />
