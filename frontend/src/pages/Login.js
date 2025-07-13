@@ -27,7 +27,7 @@ function Login() {
       return handleError('email and password are required');
     }
     try {
-      const url = `https://gen-cv-ai-resumebuilder-api.vercel.app/auth/login`; // ✅ Updated API URL
+      const url = `https://auth-universal-repo.vercel.app/api/auth/login`; // ✅ Updated API URL
       const response = await fetch(url, {
         method: "POST", // ✅ Confirmed POST
         headers: {
